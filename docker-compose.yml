@@ -10,6 +10,7 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
+      
     ports:
       - '5432:5432'
     networks:

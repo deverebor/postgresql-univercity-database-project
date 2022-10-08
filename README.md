@@ -34,6 +34,19 @@ docker compose up
 # access the pgadmin on https://localhost:5050
 ```
 
+## 🛠️ How to populate the database
+
+Make sure you are running the project and have the pgadmin open.
+
+```zsh
+# Access the pgadmin on https://localhost:5050
+```
+
+```zsh
+# Create a new db using the script dump.sql
+# And then copy and past the populate sql script in utils folder
+```
+
 ## 📜 About project
 
 The theme given to our team was the model of work in the post pandemic

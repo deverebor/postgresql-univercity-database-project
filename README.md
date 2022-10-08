@@ -31,7 +31,7 @@ docker compose up
 ```
 
 ```zsh
-# access the pgadmin on http://localhost:5050
+# access the pgadmin on https://localhost:5050
 ```
 
 ## 📜 About project
@@ -144,7 +144,7 @@ to generate graphs from the data in the database.
 - [Brasil.io](https://brasil.io/dataset/covid19/caso/) use as base to
   create relationships and structure.
 
-## 👨🏾‍🦱 Equipe composta por
+## 👨🏾‍🦱 The team
 
 - [Lucas Souza](https://www.linkedin.com/in/lucas-souza-dev/).
 - [Bruno Lucciola](https://www.linkedin.com/in/brunolucciola/).

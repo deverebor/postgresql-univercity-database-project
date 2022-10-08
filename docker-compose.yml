@@ -1,6 +1,13 @@
 version: '3.5'
 
 services:
+  web:
+    build: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/code
+
   postgres:
     container_name: postgres_container
     image: postgres
@@ -10,7 +17,7 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
-      
+
     ports:
       - '5432:5432'
     networks:

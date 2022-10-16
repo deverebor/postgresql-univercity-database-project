@@ -1,8 +1,14 @@
 FROM library/postgres
-FROM python:3.10-alpine
+FROM python:3.10-slim
 ADD . /code
 WORKDIR /code
-RUN pip install -r requirements.txt
+RUN apt-get update -y \
+    apt-get upgrade -y \
+    apt-get install -y build-essential \
+    apt-get install -y python-dev \
+    apt-get install -y libpq-dev \
+    pip install -U pip \
+    pip install -r requirements.txt
 COPY dump.sql /docker-entrypoint-initdb.d/
 
 ENV POSTGRES_USER=postgres

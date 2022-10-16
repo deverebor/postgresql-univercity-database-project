@@ -1,13 +1,6 @@
 version: '3.5'
 
 services:
-  web:
-    build: .
-    ports:
-      - '8000:8000'
-    volumes:
-      - .:/code
-
   postgres:
     container_name: postgres_container
     image: postgres
@@ -40,6 +33,12 @@ services:
       - postgres
     restart: unless-stopped
 
+  web:
+    restart: unless-stopped
+    build: .
+    links:
+      - postgres
+
 networks:
   postgres:
     driver: bridge
@@ -47,3 +46,4 @@ networks:
 volumes:
   postgres:
   pgadmin:
+  web:

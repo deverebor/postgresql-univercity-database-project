@@ -1,1 +1,3 @@
 debugpy
+psycopg2
+pygresql

@@ -4,7 +4,8 @@ import psycopg2
 
 # Connect to the database
 conn = psycopg2.connect(
-    database="my-db", user="postgres", password="admin", host="172.18.0.3", port="5432"
+    database="postgres", user="postgres", password="admin123",
+    host="172.25.0.3", port="5432"
 )
 print("Opened database successfully")
 
@@ -12,4 +13,4 @@ print("Opened database successfully")
 cur = conn.cursor()
 
 # Execute a command: this creates a new table
-cur.execute('''SELECT * FROM "public"."users"''')
+cur.execute('''SELECT * FROM "public"."table_interviewee"''')

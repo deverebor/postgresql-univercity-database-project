@@ -1,16 +1,21 @@
-# Connect to the postgres database with vanilla psycopg2 and python
-
+#!/usr/bin/env python
+import matplotlib.pyplot as plt
 import psycopg2
+
+from src.charts import charts
+from src.database import database
 
 # Connect to the database
 conn = psycopg2.connect(
-    database="postgres", user="postgres", password="admin123",
-    host="172.25.0.3", port="5432"
+    dbname="postgres",
+    user="postgres",
+    password="admin123",
+    host="localhost",
+    port="5432"
 )
-print("Opened database successfully")
 
-# Create a cursor to perform database operations
 cur = conn.cursor()
+cur.execute(database.GET_INTERVIEWEE_WORK_COUNTRY_AND_NEW_WORK_COUNTRY)
 
-# Execute a command: this creates a new table
-cur.execute('''SELECT * FROM "public"."table_interviewee"''')
+charts.method_generate_graph(cur.fetchall())
+plt.show()

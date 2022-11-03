@@ -15,7 +15,7 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
-cur.execute(database.GET_INTERVIEWEE_WORK_COUNTRY_AND_NEW_WORK_COUNTRY)
+cur.execute(database.GET_INTERVIEWEE_HAS_MORE_THAN_SIX_HORUS_OF_WORK)
 
-charts.method_generate_graph(cur.fetchall())
+charts.method_generate_pie_chart(cur.fetchall())
 plt.show()

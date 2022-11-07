@@ -5,7 +5,9 @@ import psycopg2
 from src.charts import charts
 from src.database import database
 
-# Connect to the database
+# Main file for the application.
+# Here we will create the database connection and pass it to the charts module.
+
 conn = psycopg2.connect(
     dbname="postgres",
     user="postgres",

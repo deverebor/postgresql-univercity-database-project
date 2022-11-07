@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 
 
 def method_generate_bar_graph(methods):
+    """
+    This method will generate a bar graph.
+
+    The methods parameter is a list of tuples with the following structure:
+    """
     figure = plt.figure()
     axes = figure.add_subplot(1, 1, 1)
     axes.bar(
@@ -13,6 +18,11 @@ def method_generate_bar_graph(methods):
 
 
 def method_generate_bar_horizontal_chart(methods, chart_title, x_label):
+    """
+    This method will generate a bar horizontal graph.
+
+    The methods parameter is a list of tuples with the following structure:
+    """
     figure = plt.figure()
     axes = figure.add_subplot(1, 1, 1)
     axes.barh(
@@ -26,6 +36,11 @@ def method_generate_bar_horizontal_chart(methods, chart_title, x_label):
 
 
 def method_generate_pie_chart(methods):
+    """
+    This method will generate a pie chart.
+
+    The methods parameter is a list of tuples with the following structure:
+    """
     figure = plt.figure()
     axes = figure.add_subplot(1, 1, 1)
     axes.pie(

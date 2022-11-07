@@ -1,3 +1,10 @@
+
+"""
+Here all the queries to generate the charts are defined.
+
+If you want to add a new chart, you can add a new query here.
+"""
+
 GET_INTERVIEWEE_WHO_WANTS_CHANGE_WORK = """
     SELECT
         full_name,
